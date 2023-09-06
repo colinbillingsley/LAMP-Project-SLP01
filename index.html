@@ -3,13 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/styles.css">
         <title>Sample Title</title>
     </head>
 
     <body>
 
-        <h1>Welcome to our Contact Manager</h1>
+        <!-- Container that holds the welcome message and login form -->
+        <div class="welcome-container">
+
+            <!-- displays the welcome text -->
+            <div class="welcome-text">
+                <h1>Welcome to our Contact Manger</h1>
+            </div>
+
+            <!-- form to login -->
+            <div class="login-container">
+                <form action="post" class="login-form">
+                    <label for="login-email" class="login-email-label">Email:</label>
+                    <input type="email" class="login-email-txtbox" id="login-email" name="email" placeholder="Please enter your email" required>
+                    <label for="login-password" class="login-password-label">Password:</label>
+                    <input type="password" class="login-password-txtbox" id="login-password" name="password" placeholder="Please enter your password" required>
+                    <button type="submit" class="login-btn">Log In</button>
+
+                     <!-- ask user if they have an account, if not, request to sign up -->
+                    <div class="welcome-create-account">
+                        <p>Don't have an account?</p>
+                        <button type="submit" class="sign-up-btn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         
     </body>
 </html>
