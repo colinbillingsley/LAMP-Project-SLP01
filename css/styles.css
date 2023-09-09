@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/3ada9815c06d2619d52d16a5601c96b2?family=Early+GameBoy+Regular);
+
 /* css reset */
 * {
     margin: 0;
@@ -7,10 +9,10 @@
 
 :root {
     --bg-pic: url(/imgs/andrew-neel-cckf4TsHAuw-unsplash-3.jpg);
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --form-bg-color: rgba(0, 0, 0, 0.551);
-    --login-btn-clr: rgb(255, 255, 255);
-    --login-btn-font-clr: rgb(28, 53, 97);
+    --font-family: "Early GameBoy Regular", system-ui;
+    --main-font-color: white;
+    --top-nav-bg-clr: rgba(0, 0, 0, 0.211);
+    --footer-bg-clr: rgba(0, 0, 0, 0.211);
 }
 
 html, body {
@@ -18,103 +20,128 @@ html, body {
     height: 100%;
 }
 
-html {
-    background: var(--bg-pic);
-    background-size: cover;
-    font-family: var(--font-family);
-    scroll-behavior: smooth;
-}
-
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.login-container {
+html {
+    font-family: var(--font-family);
+    font-size: 1em;
+    scroll-behavior: smooth;
+    background: url(/imgs/pokemon-bg.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+footer {
+    background: var(--footer-bg-clr);
+    margin-top: auto;
+    padding: 3em 1em;
+    color: white;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+/* top navigation bar */
+.top-nav-bar {
     display: flex;
-    flex: 1;
-    background: var(--form-bg-color);
-    border-radius: 0.5em;
-    margin: 1em;
-    max-width: 50em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    margin-bottom: 5em;
+    background: var(--top-nav-bg-clr);
 }
 
-.login-form {
-    flex: 1;
-    max-width: 50em;
+.top-nav-bar-logo {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.pokemon-ball {
+    fill: white;
+}
+
+/* body of page */
+.text-box-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* welcome text box */
+.text-box {
+    max-width: 80em;
+    border-radius: 2px;
+    padding: 2em;
+    margin: 0 2em;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+}
+
+/* welcome text style */
+.main-name-heading {
+    text-align: center;
+    font-size: calc(2em + 1vw);
+}
+
+/* buttons in body */
+.body-btns-container {
     display: flex;
     flex-direction: column;
-    padding: 1.5em;
-    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 2em 0;
 }
 
-.login-header-txt {
-    margin-bottom: 0.5em;
-}
-
-.login-email-label,
-.login-password-label {
-    padding: 0.5em 0;
+/* body buttons */
+.body-login-btn,
+.body-create-account-btn {
+    padding: 1em;
+    padding-right: 1.8em;
+    border-radius: 4em;
     font-weight: bold;
-}
-
-.login-email-txtbox,
-.login-password-txtbox {
-    color: white;
-    padding: 0.75em;
-    border: 2px solid transparent;
-    background: rgba(168, 168, 168, 0.332);
-    transition: all ease 0.3s;
-    width: auto
-}
-
-.login-email-txtbox:focus,
-.login-password-txtbox:focus {
-    outline: none;
-    border-bottom: 2px solid var(--login-btn-clr);
-}
-
-.login-password-txtbox {
-    margin-bottom: 1em;
-}
-
-.login-btn {
-    align-self: center;
-    width: 50%;
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--login-btn-font-clr);
-    padding: 0.55em;
-    margin-bottom: 0.75em;
-    border-radius: 0.5em;
-    border: solid 2px transparent;
-    background-color: var(--login-btn-clr);
-    transition: all ease 0.3s;
-}
-
-.login-btn:hover {
-    background-color: rgba(255, 255, 255, 0.891);
+    font-family: var(--font-family);
+    white-space: nowrap;
     cursor: pointer;
+    font-size: 1.35em;
 }
 
-.login-btn:active {
-    opacity: 90%;
+.body-login-btn:is(:hover, :focus) .pointer,
+.body-create-account-btn:is(:hover, :focus) .pointer {
+    visibility: visible;
 }
 
-.welcome-create-account {
-    text-align: center;
+.body-create-account-btn,
+.body-login-btn {
+    margin: 0.5em;
 }
 
-.sign-up-link {
-    color: var(--login-btn-clr);
+.icons8-link {
+    color: white;
 }
 
-.sign-up-link:hover {
-    opacity: 85%;
+.pointer {
+    visibility: hidden;
 }
 
-.login-email-txtbox::placeholder,
-.login-password-txtbox::placeholder {
-    color: rgba(255, 255, 255, 0.597);
+
+
+/* style when width is <= 725px */
+@media (max-width: 725px) or (orientation: landscape) {
+    .main-name-heading {
+        font-size: calc(1.2em + 1vw);
+    }
+
+    .body-login-btn,
+    .body-create-account-btn {
+    font-size: 1em;
+}
 }

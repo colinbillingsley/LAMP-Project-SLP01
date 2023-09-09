@@ -7,25 +7,63 @@
         <title>Sample Title</title>
     </head>
 
+    <header>
+        <nav class="top-nav-bar">
+            <!-- Logo or name of contact manager -->
+            <a href="#" class="top-nav-bar-logo">POKEMON MANAGER</a>
+
+            <img class="" src="/icons/icons8-pokeball-32-2.png" alt="hello" title="">
+        </nav>
+    </header>
+
+    <!-- Page welcome message -->
     <body>
-        <!-- form to login -->
-        <div class="login-container">
-            <form action="https://httpbin.org/post" method="post" class="login-form">
-                <!-- login header -->
-                <h2 class="login-header-txt">User Login</h2>
-
-                <label for="login-email" class="login-email-label">Email</label>
-                <input type="email" class="login-email-txtbox" id="login-email" name="email" placeholder="Please enter your email" required>
-                <label for="login-password" class="login-password-label">Password</label>
-                <input type="password" class="login-password-txtbox" id="login-password" name="password" placeholder="Please enter your password" required>
-                <button type="submit" class="login-btn">Log In</button>
-
-                    <!-- ask user if they have an account, if not, request to sign up -->
-                <div class="welcome-create-account">
-                    <p>Don't have an account? <a href="#" class="sign-up-link">Sign Up</a></p>
-                </div>
-            </form>
+        <div class="text-box-container">
+            <div class="text-box">
+                <h1 class="main-name-heading">Welcome to the Pokemon Manager</h1>
+            </div>
         </div>
-    
+
+        <ul class="body-btns-container">
+            <!-- log in button -->
+            <li class="body-btn">
+                <button class="body-login-btn"> 
+                    <svg class="pointer" width="13" height="13" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 1">
+                            <rect id="Rectangle 1" x="29" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 2" x="41" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 3" x="53" y="26" width="12" height="36" fill="black"/>
+                            <rect id="Rectangle 4" x="65" y="38" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 5" x="65" y="50" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 6" x="53" y="62" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 7" x="41" y="74" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 8" x="29" y="74" width="12" height="12" fill="black"/>
+                        </g>
+                    </svg> Log In
+                </button>
+            </li>
+
+            <!-- create account button -->
+            <li class="body-btn">
+                <button class="body-create-account-btn">
+                    <svg class="pointer" width="13" height="13" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 1">
+                            <rect id="Rectangle 1" x="29" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 2" x="41" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 3" x="53" y="26" width="12" height="36" fill="black"/>
+                            <rect id="Rectangle 4" x="65" y="38" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 5" x="65" y="50" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 6" x="53" y="62" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 7" x="41" y="74" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 8" x="29" y="74" width="12" height="12" fill="black"/>
+                        </g>
+                    </svg> Create Account
+                </button>
+            </li>
+        </ul>
+
+        <footer> 
+            Icons by <a target="_blank" href="https://icons8.com/icon/JN8zUjd5tqJZ/pokeball" class="icons8-link">Icons8</a>
+        </footer>
     </body>
 </html>
