@@ -133,7 +133,7 @@ li {
     animation: fade-in-out 0.5s alternate infinite;
 }
 
-.buttin:active {
+.button:active {
     border: 1px solid rgba(0, 0, 0, 0.299);
 }
 
