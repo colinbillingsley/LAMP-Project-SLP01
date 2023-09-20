@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css">
+        <title>Pokemon Manager</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="main.html" class="main-logo">POKEMON MANAGER</a>
+            <nav class="main-nav-container">
+                <ul class="main-nav-links">
+                    <li>
+                        <a href="profile.html" class="main-link">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html" class="main-link">Contacts</a>
+                    </li>
+                </ul>
+                <form action="https://httpbin.org/post" method="post">
+                    <button class="main-button" type="submit">Sign Out</button>
+                </form>
+            </nav>
+        </header>
+
+        <div class="profile-container">
+            <form class="profile-form" action="" method="">
+                <fieldset>
+                    <legend>Profile</legend>
+
+                    <label for="first-name" class="f-name" >First Name
+                        <input type="text" name="first-name" id="first-name" readonly>
+                    </label>
+
+                    <label for="last-name" class="l-name">Last Name
+                        <input type="text" name="last-name" id="last-name" readonly>
+                    </label>
+
+                    <label for="email"  class="email">Email
+                        <input type="text" name="email" id="email" readonly>
+                    </label>
+                    
+                    <label for="phone" class="phone-num">Phone Number
+                        <input type="tel" name="phone" id="phone" readonly>
+                    </label>
+
+                    <label for="username" class="uname">Username
+                        <input type="text" name="username" id="username" readonly>
+                    </label>
+
+                    <label for="password" class="pass">Password
+                        <input type="password" name="password" id="password" readonly>
+                    </label>
+
+                    <button class="form-button"><svg class="pointer" width="13" height="13" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group 1">
+                            <rect id="Rectangle 1" x="29" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 2" x="41" y="14" width="12" height="60" fill="black"/>
+                            <rect id="Rectangle 3" x="53" y="26" width="12" height="36" fill="black"/>
+                            <rect id="Rectangle 4" x="65" y="38" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 5" x="65" y="50" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 6" x="53" y="62" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 7" x="41" y="74" width="12" height="12" fill="black"/>
+                            <rect id="Rectangle 8" x="29" y="74" width="12" height="12" fill="black"/>
+                        </g>
+                    </svg> Edit</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <ul class="footer-links">
+                    <li>
+                        <a href="profile.html" class="main-link">Profile</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html" class="main-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
