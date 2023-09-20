@@ -1,0 +1,392 @@
+@import url(https://db.onlinewebfonts.com/c/3ada9815c06d2619d52d16a5601c96b2?family=Early+GameBoy+Regular);
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-pic: url(/imgs/andrew-neel-cckf4TsHAuw-unsplash-3.jpg);
+    --font-family: "Early GameBoy Regular", system-ui;
+    --main-font-color: white;
+    --top-nav-bg-clr: rgba(0, 0, 0, 0.211);
+    --footer-bg-clr: rgba(0, 0, 0, 0.211);
+}
+
+/* -- MAIN TAG STYLING -- */
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: 1em;
+    scroll-behavior: smooth;
+    background: url(/imgs/pokemon-bg.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 0 1em;
+    background-color: var(--top-nav-bg-clr);
+    height: 5em;
+    width: 100%;
+    color: white;
+}
+
+footer {
+    display: none;
+    background-color: var(--top-nav-bg-clr);
+    padding: 1em;
+}
+
+.main-nav-container {
+    display: flex;
+    gap: 1em;
+}
+
+.main-nav-container > ul {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.main-logo {
+    text-decoration: none;
+    color: white;
+}
+
+.main-link {
+    padding: 1em;
+    background-color: white;
+    color: black;
+    font-size: 0.85em;
+    text-decoration: none;
+    border-style: solid; 
+    border-width: 2px;
+    border-color: gray black black gray;
+}
+
+.main-link:hover {
+    text-decoration: underline;
+}
+
+.main-link:active {
+    border-color: black gray gray black;
+}
+
+.sign-out-btn {
+    font-family: inherit;
+    padding: 1em 0;
+    background-color: white;
+    border: none;
+}
+
+.sign-out-btn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+/* -- MAIN CONTENT STYLING -- */
+
+.main-content,
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: auto;
+}
+
+.welcome-user {
+    background-color: white;
+    padding: 3em 1em;
+    margin: 2em 1em;
+    border: 5px double black;
+    font-size: calc(1em + 1vw);
+}
+
+/* -- PROFILE PAGE STYLING -- */
+
+/* Form Tags */
+.profile-form {
+    background: white;
+    padding: 2em;
+    margin: 1em 1em 3em 1em;
+    width: 100%;
+    max-width: 50em;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+}
+
+fieldset {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+legend {
+    padding-inline: 0.5em;
+}
+
+label {
+    padding-bottom: 1em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+    display: block;
+    border: 1px solid black;
+    padding: 1em;
+    font-family: var(--font-family);
+    margin: 0.5em 0 0 0;
+    width: 100%;
+}
+
+input:focus {
+    outline: black 3px double;
+}
+
+.pointer {
+    visibility: hidden;
+}
+
+/* Form Classes */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-button {
+    margin: 0 0 0 auto;
+    padding: 1em;
+    padding-right: 2.2em;
+    font-family: var(--font-family);
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 4em;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    background-color: white;
+}
+
+.form-button:hover {
+    cursor: pointer;
+}
+
+.form-button:focus {
+    outline: none;
+}
+
+.form-button:is(:hover, :focus) .pointer {
+    visibility: visible;
+    animation: fade-in-out 0.5s alternate infinite;
+}
+
+.form-button:active {
+    border: 1px solid rgba(0, 0, 0, 0.299);
+}
+
+/* Profile form input box sizing */
+.f-name {
+    flex-grow: 1;
+    flex-basis: 15em
+}
+ 
+.l-name {
+    flex-grow: 2;
+    flex-basis: 25em
+}
+
+.email {
+    flex-grow: 2;
+    flex-basis: 25em
+}
+
+.phone-num {
+    flex-grow: 1;
+    flex-basis: 15em
+}
+
+.uname,
+.pass {
+    flex-grow: 2;
+    flex-basis: 40em
+}
+
+/* -- CONTACTS PAGE STYLING -- */
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 3px double black;
+    margin: 1em;
+    width: 95%;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+.contact-footer-container {
+    margin: auto 0;
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border-top: 1px solid black;
+    background-color: white;
+}
+
+.main-button {
+    padding: 1em;
+    font-family: inherit;
+    background-color: white;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.table-container {
+    overflow: scroll;
+}
+
+input[type="search"] {
+    padding: 1em;
+    font-family: inherit;
+    flex-basis: 30em;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+}
+
+th, 
+td {
+    white-space: nowrap;
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(255, 141, 141);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.045);
+}
+
+/* -- ANIMATIONS -- */
+@keyframes fade-in-out {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+@media only screen and (max-width: 800px) {
+
+    /* -- MAIN PAGE STYLING -- */
+    .main-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        text-align: center;
+    }
+
+    .welcome-user {
+        background-color: white;
+        padding: 3em 1em;
+        margin: 2em 1em;
+        border: 5px double black;
+        font-size: calc(1em + 1vw);
+    }
+
+    /* -- PROFILE PAGE STYLING -- */
+
+    label {
+        font-size: calc(0.5em + 1vw);
+    }
+
+    /* -- CONTACT PAGE STYLING -- */
+
+    .contact-body {
+        justify-content: space-between;
+    }
+
+    /* -- ALL PAGE STYLINGS -- */
+
+    header {
+        margin-bottom: 1em;
+    }
+
+    footer {
+        display: flex;
+        width: 100%;
+    }
+
+    .main-nav-links > li {
+        display: none;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+}
