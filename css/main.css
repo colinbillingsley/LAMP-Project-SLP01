@@ -170,47 +170,11 @@ input:focus {
     outline: black 3px double;
 }
 
-.pointer {
-    visibility: hidden;
-}
-
 /* Form Classes */
 .form-container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.form-button {
-    margin: 0 0 0 auto;
-    padding: 1em;
-    padding-right: 2.2em;
-    font-family: var(--font-family);
-    text-align: center;
-    border: 1px solid white;
-    border-radius: 4em;
-    box-shadow: 0 1px 0 1px black,
-                inset 0 1px 0 1px black,
-                0 0 0 1px black,
-                inset 0 0 0 1px black;
-    background-color: white;
-}
-
-.form-button:hover {
-    cursor: pointer;
-}
-
-.form-button:focus {
-    outline: none;
-}
-
-.form-button:is(:hover, :focus) .pointer {
-    visibility: visible;
-    animation: fade-in-out 0.5s alternate infinite;
-}
-
-.form-button:active {
-    border: 1px solid rgba(0, 0, 0, 0.299);
 }
 
 /* Profile form input box sizing */
@@ -238,6 +202,10 @@ input:focus {
 .pass {
     flex-grow: 2;
     flex-basis: 40em
+}
+
+.right {
+    margin: 0 0 0 auto;
 }
 
 /* -- CONTACTS PAGE STYLING -- */
