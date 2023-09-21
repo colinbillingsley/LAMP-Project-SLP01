@@ -8,7 +8,7 @@
 }
 
 :root {
-    --bg-pic: url(/imgs/andrew-neel-cckf4TsHAuw-unsplash-3.jpg);
+    --bg-pic: url(/imgs/pokemon-bg.jpeg);
     --font-family: "Early GameBoy Regular", system-ui;
     --main-font-color: white;
     --top-nav-bg-clr: rgba(0, 0, 0, 0.211);
@@ -30,7 +30,7 @@ html {
     font-family: var(--font-family);
     font-size: 1em;
     scroll-behavior: smooth;
-    background: url(/imgs/pokemon-bg.jpeg) no-repeat center center fixed;
+    background: var(--bg-pic) no-repeat center center fixed;
     background-size: cover;
 }
 
