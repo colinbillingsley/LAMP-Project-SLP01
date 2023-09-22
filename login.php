@@ -8,16 +8,16 @@
     <title>Login - Pokemon Manager</title>
 </head>
 
-<header>
-    <nav class="top-nav-bar">
-        <!-- Logo or name of contact manager -->
-        <a href="index.php" class="top-nav-bar-logo">POKEMON MANAGER</a>
-
-        <img class="" src="/icons/icons8-pokeball-32-2.png" alt="hello" title="">
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav class="top-nav-bar">
+            <!-- Logo or name of contact manager -->
+            <a href="index.php" class="top-nav-bar-logo">POKEMON MANAGER</a>
+
+            <img class="" src="/icons/icons8-pokeball-32-2.png" alt="hello" title="">
+        </nav>
+    </header>
+
     <div class="form-container">
         <form action="https://httpbin.org/get" method="get">
             <fieldset>
@@ -47,6 +47,12 @@
             </fieldset>
         </form>
     </div>
+
+    <footer>
+        <div class="index-footer">
+            Icons by <a target="_blank" href="https://icons8.com/icon/JN8zUjd5tqJZ/pokeball" class="icons8-link">Icons8</a>
+        </div>
+    </footer>
 </body>
 
 </html>
