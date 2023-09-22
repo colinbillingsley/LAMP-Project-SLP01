@@ -65,7 +65,9 @@
     </ul>
 
     <footer>
-        Icons by <a target="_blank" href="https://icons8.com/icon/JN8zUjd5tqJZ/pokeball" class="icons8-link">Icons8</a>
+        <div class="index-footer">
+            Icons by <a target="_blank" href="https://icons8.com/icon/JN8zUjd5tqJZ/pokeball" class="icons8-link">Icons8</a>
+        </div>
     </footer>
 </body>
 
