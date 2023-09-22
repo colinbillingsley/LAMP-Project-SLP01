@@ -8,7 +8,7 @@
 }
 
 :root {
-    --bg-pic: url(/imgs/pokemon-bg.jpeg);
+    --bg-pic: url(../imgs/pokemon-bg.jpeg);
     --font-family: "Early GameBoy Regular", system-ui;
     --main-font-color: white;
     --top-nav-bg-clr: rgba(0, 0, 0, 0.211);
@@ -23,6 +23,8 @@ html, body {
 }
 
 body {
+    background: var(--bg-pic) no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     flex-direction: column;
 }
@@ -31,8 +33,6 @@ html {
     font-family: var(--font-family);
     font-size: 1em;
     scroll-behavior: smooth;
-    background: var(--bg-pic) no-repeat center center fixed;
-    background-size: cover;
 }
 
 footer {

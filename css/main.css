@@ -24,14 +24,14 @@ html {
 
 body {
     min-height: 100vh;
+    background: var(--bg-pic) no-repeat center center fixed;
+    background-size: cover;
 }
 
 html {
     font-family: var(--font-family);
     font-size: 1em;
     scroll-behavior: smooth;
-    background: var(--bg-pic) no-repeat center center fixed;
-    background-size: cover;
 }
 
 header {
