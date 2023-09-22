@@ -10,14 +10,14 @@
 
 <body>
     <header>
-        <a href="main.html" class="main-logo">POKEMON MANAGER</a>
+        <a href="main.php" class="main-logo">POKEMON MANAGER</a>
         <nav class="main-nav-container">
             <ul class="main-nav-links">
                 <li>
-                    <a href="profile.html" class="main-link">Profile</a>
+                    <a href="profile.php" class="main-link">Profile</a>
                 </li>
                 <li>
-                    <a href="contacts.html" class="main-link">Contacts</a>
+                    <a href="contacts.php" class="main-link">Contacts</a>
                 </li>
             </ul>
             <form action="https://httpbin.org/post" method="post">
@@ -64,10 +64,10 @@
         <div class="footer-container">
             <ul class="footer-links">
                 <li>
-                    <a href="profile.html" class="main-link">Profile</a>
+                    <a href="profile.php" class="main-link">Profile</a>
                 </li>
                 <li>
-                    <a href="contacts.html" class="main-link">Contacts</a>
+                    <a href="contacts.php" class="main-link">Contacts</a>
                 </li>
             </ul>
         </div>
