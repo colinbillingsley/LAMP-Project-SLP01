@@ -15,11 +15,21 @@
     --footer-bg-clr: rgba(0, 0, 0, 0.211);
 }
 
-/* -- MAIN TAG STYLING -- */
+/* -- TAG STYLING -- */
 
 html, body {
     width: 100%;
     height: 100%;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
 }
 
 body {
@@ -29,18 +39,8 @@ body {
     flex-direction: column;
 }
 
-html {
-    font-family: var(--font-family);
-    font-size: 1em;
-    scroll-behavior: smooth;
-}
-
 footer {
-    background: var(--footer-bg-clr);
     margin-top: auto;
-    padding: 3em 1em;
-    color: white;
-    width: 100%;
 }
 
 li {
@@ -52,8 +52,10 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1em;
     padding: 1.5em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
+    width: 100%;
     background: var(--top-nav-bg-clr);
 }
 
@@ -63,11 +65,33 @@ li {
     white-space: nowrap;
 }
 
+.top-nav-bar-logo:hover {
+    text-decoration: underline;
+}
+
+.top-nav-main-links {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.right-links {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.border {
+    border-style: solid; 
+    border-width: 2px;
+    border-color: gray black black gray;
+}
+
 .pokemon-ball {
     fill: white;
 }
 
-/* -- MAIN BODY OF INDEX PAGE STYLING */
+/* -- INDEX PAGE STYLING */
 
 /* Welcome Text Box Styling */
 .text-box-container {
@@ -90,10 +114,10 @@ li {
 
 .main-name-heading {
     text-align: center;
-    font-size: calc(2em + 1vw);
+    font-size: calc(1.5em + 1vw);
 }
 
-/* Button styling in main body of index page */
+/* Button styling in body of index page */
 .body-btns-container {
     display: flex;
     flex-direction: column;
@@ -135,6 +159,13 @@ li {
 
 .button:active {
     border: 1px solid rgba(0, 0, 0, 0.299);
+}
+
+.index-footer {
+    background: var(--footer-bg-clr);
+    padding: 3em 1em;
+    color: white;
+    width: 100%;
 }
 
 /* Icons8 link styling */
@@ -185,7 +216,7 @@ input {
     display: block;
     border: 1px solid black;
     padding: 1em;
-    font-family: var(--font-family);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0.5em 0 0 0;
     width: 100%;
 }
@@ -261,6 +292,138 @@ input:focus {
     flex-basis: 40em
 }
 
+/* -- MAIN PAGE STYLING -- */
+.main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-user {
+    background-color: white;
+    padding: 3em 1em;
+    margin: 2em 1em;
+    border: 5px double black;
+    font-size: calc(1em + 1vw);
+}
+
+.footer-links {
+    display: none;
+}
+
+.main-link {
+    padding: 1em;
+    background-color: white;
+    color: black;
+    font-size: 0.85em;
+    text-decoration: none;
+}
+
+.main-link:hover {
+    text-decoration: underline;
+}
+
+.main-link:active {
+    border-color: black gray gray black;
+}
+
+.main-button {
+    font-family: inherit;
+    padding: 1em;
+    background-color: white;
+}
+
+.main-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.right {
+    margin: 0 0 0 auto;
+}
+
+/* -- PROFILE STYLING -- */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* -- CONTACTS PAGE -- */
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 3px double black;
+    margin: 1em;
+    width: 95%;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+.contact-footer-container {
+    margin: auto 0;
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border-top: 1px solid black;
+    background-color: white;
+}
+
+.table-container {
+    overflow: scroll;
+}
+
+input[type="search"] {
+    padding: 1em;
+    flex-basis: 30em;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+}
+
+th, 
+td {
+    white-space: nowrap;
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(255, 141, 141);
+}
+
+td {
+    font-family: system-ui;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.045);
+}
+
 /* -- ANIMATIONS -- */
 @keyframes fade-in-out {
     from {opacity: 100%;}
@@ -269,12 +432,77 @@ input:focus {
 
 /* style when width is <= 725px */
 @media (max-width: 725px) or (orientation: landscape) {
+    
+}
+@media only screen and (max-width: 800px) {
+    /* LANDING PAGE (INDEX) STYLING */
     .main-name-heading {
         font-size: calc(1.2em + 1vw);
     }
 
     .body-login-btn,
     .body-create-account-btn {
-    font-size: 1em;
+        font-size: 1em;
+    }
+
+    /* -- MAIN STYLING -- */
+    .main-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        text-align: center;
+    }
+
+    .welcome-user {
+        background-color: white;
+        padding: 3em 1em;
+        margin: 2em 1em;
+        border: 5px double black;
+        font-size: calc(1em + 1vw);
+    }
+
+    /* -- PROFILE PAGE STYLING -- */
+    label {
+        font-size: calc(0.5em + 1vw);
+    }
+
+    /* -- CONTACT PAGE STYLING -- */
+    .contact-body {
+        justify-content: space-between;
+    }
+
+    /* -- MISCELLANIOUS STYLINGS -- */
+    footer {
+        display: flex;
+        width: 100%;
+    }
+
+    .top-nav-main-links {
+        display: none;
+    }
+
+    .main-nav-links > li {
+        display: none;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 1em;
+        background-color: var(--footer-bg-clr);
+        padding: 1em;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
     }
 }
