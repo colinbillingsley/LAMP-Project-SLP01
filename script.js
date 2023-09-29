@@ -49,7 +49,6 @@ function addContact() {
     let userCell = newRow.insertCell(5);
 
     // add the input boxes into each cell
-    deleteCell.appendChild(deleteBtn);
     fNameCell.appendChild(firstName);
     LNameCell.appendChild(lastName);
     emailCell.appendChild(email);
