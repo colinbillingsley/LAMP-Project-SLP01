@@ -339,6 +339,10 @@ input:focus {
     text-decoration: underline;
 }
 
+.main-button:active {
+    border-color: black gray gray black;
+}
+
 .right {
     margin: 0 0 0 auto;
 }
@@ -395,6 +399,10 @@ input:focus {
     overflow: scroll;
 }
 
+.delete {
+    font-family: "Early GameBoy Regular", system-ui;
+}
+
 input[type="search"] {
     padding: 1em;
     flex-basis: 30em;
@@ -430,10 +438,7 @@ tr:nth-child(even) {
     to {opacity: 0%;}
   }
 
-/* style when width is <= 725px */
-@media (max-width: 725px) or (orientation: landscape) {
-    
-}
+/* style when width is <= 800px */
 @media only screen and (max-width: 800px) {
     /* LANDING PAGE (INDEX) STYLING */
     .main-name-heading {
@@ -478,7 +483,6 @@ tr:nth-child(even) {
 
     /* -- MISCELLANIOUS STYLINGS -- */
     footer {
-        display: flex;
         width: 100%;
     }
 
@@ -504,5 +508,6 @@ tr:nth-child(even) {
         align-items: center;
         gap: 1em;
         padding: 1em;
+        text-align: center;
     }
 }
