@@ -1,6 +1,7 @@
 // create delete button
     let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
+    deleteBtn.setAttribute("id", "delete-btn");
     deleteBtn.classList.add("main-button");
     deleteBtn.classList.add("delete");
 
