@@ -18,7 +18,7 @@
             <div class="right-links">
                 <ul class="top-nav-main-links">
                     <li>
-                        <a href="profile.php" class="main-link border">Profile</a>
+                        <a href="profile.php" class="main-link border">Edit Profile</a>
                     </li>
                     <li>
                         <a href="contacts.php" class="main-link border">Contacts</a>
@@ -36,30 +36,30 @@
                 <legend>Profile</legend>
 
                 <label for="first-name" class="f-name">First Name
-                    <input type="text" name="first-name" id="first-name" placeholder="First Name" readonly>
+                    <input type="text" name="first-name" id="first-name">
                 </label>
 
                 <label for="last-name" class="l-name">Last Name
-                    <input type="text" name="last-name" id="last-name" placeholder="Last Name" readonly>
+                    <input type="text" name="last-name" id="last-name">
                 </label>
 
                 <label for="email" class="email">Email
-                    <input type="text" name="email" id="email" placeholder="Email" readonly>
+                    <input type="text" name="email" id="email">
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
-                    <input type="tel" name="phone" id="phone" placeholder="Phone number" readonly>
+                    <input type="tel" name="phone" id="phone">
                 </label>
 
                 <label for="username" class="uname">Username
-                    <input type="text" name="username" id="username" placeholder="Username" readonly>
+                    <input type="text" name="username" id="username">
                 </label>
 
                 <label for="password" class="pass">Password
-                    <input type="password" name="password" id="password" readonly>
+                    <input type="password" name="password" id="password">
                 </label>
 
-                <button id="edit" class="main-button right">Edit</button>
+                <button id="save-changes" class="main-button right border">Save Changes</button>
             </fieldset>
         </form>
     </div>
@@ -68,10 +68,10 @@
         <div class="footer-container">
             <ul class="footer-links">
                 <li>
-                    <a href="profile.php" class="main-link">Profile</a>
+                    <a href="profile.php" class="main-link border">Edit Profile</a>
                 </li>
                 <li>
-                    <a href="contacts.php" class="main-link">Contacts</a>
+                    <a href="contacts.php" class="main-link border">Contacts</a>
                 </li>
             </ul>
         </div>
