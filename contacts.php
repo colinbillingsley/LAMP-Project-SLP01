@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="script.js"></script>
     <title>Contacts - Pokemon Manager</title>
 </head>
 
@@ -18,7 +19,7 @@
             <div class="right-links">
                 <ul class="top-nav-main-links">
                     <li>
-                        <a href="profile.php" class="main-link border">Profile</a>
+                        <a href="profile.php" class="main-link border">Edit Profile</a>
                     </li>
                     <li>
                         <a href="contacts.php" class="main-link border">Contacts</a>
@@ -36,11 +37,12 @@
             <input type="search" placeholder="Search...">
         </div>
         <div class="table-container">
-            <table class="contact-table">
+            <table id="contacts-table" class="contact-table">
                 <thead>
                     <tr>
-                        <th class="tb-last-name">Last Name</th>
+                        <th></th>
                         <th class="tb-first-name">First Name</th>
+                        <th class="tb-last-name">Last Name</th>
                         <th class="tb-email">Email</th>
                         <th class="tb-phone">Phone</th>
                         <th class="tb-username">Username</th>
@@ -48,8 +50,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Tmplastname</td>
+                        <td><button class="main-button border delete">X</button></td>
                         <td>Tmpfirstname</td>
+                        <td>Tmplastname</td>
                         <td>whatisyouremail@gmail.com</td>
                         <td>1234567890</td>
                         <td>myusernameisuser</td>
@@ -58,9 +61,8 @@
             </table>
         </div>
         <div class="contact-footer-container">
-            <div class="contact-footer">
-                <button class="main-button">+ Add Contact</button>
-                <button class="main-button">- Delete</button>
+            <div id="table-footer" class="contact-footer">
+                <button id="add-contact" class="main-button border" onclick="addContact()">+ Add Contact</button>
             </div>
         </div>
     </div>
@@ -69,7 +71,7 @@
         <div class="footer-container">
             <ul class="footer-links">
                 <li>
-                    <a href="profile.php" class="main-link border">Profile</a>
+                    <a href="profile.php" class="main-link border">Edit Profile</a>
                 </li>
                 <li>
                     <a href="contacts.php" class="main-link border">Contacts</a>
