@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><button id="delete-btn" class="main-button border delete">X</button></td>
+                        <td><button id="delete-btn" class="main-button border delete" onclick="deleteContact(this)">X</button></td>
                         <td>Tmpfirstname</td>
                         <td>Tmplastname</td>
                         <td>whatisyouremail@gmail.com</td>
