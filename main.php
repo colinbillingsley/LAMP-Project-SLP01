@@ -19,7 +19,7 @@
             <div class="right-links">
                 <ul class="top-nav-main-links">
                     <li>
-                        <a href="profile.php" class="main-link border">Profile</a>
+                        <a href="profile.php" class="main-link border">Edit Profile</a>
                     </li>
                     <li>
                         <a href="contacts.php" class="main-link border">Contacts</a>
@@ -40,10 +40,10 @@
         <div class="footer-container">
             <ul class="footer-links">
                 <li>
-                    <a href="profile.php" class="main-link">Profile</a>
+                    <a href="profile.php" class="main-link border">Edit Profile</a>
                 </li>
                 <li>
-                    <a href="contacts.php" class="main-link">Contacts</a>
+                    <a href="contacts.php" class="main-link border">Contacts</a>
                 </li>
             </ul>
         </div>
