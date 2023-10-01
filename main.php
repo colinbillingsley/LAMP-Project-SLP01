@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+// if the user is not logged in, redirect them to the login page
+if (!isset($_SESSION["user-id"])) {
+    header("Location: /login.php");
+    die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="signout.js"></script>
     <title>Pokemon Manager</title>
 </head>
 
@@ -33,7 +45,9 @@
 
     <!-- Main body section -->
     <div class="main-content">
-        <h1 class="welcome-user">Welcome, FirstName LastName</h1>
+        <h1 class="welcome-user">Welcome, <?php
+            echo htmlspecialchars(trim($_SESSION["first-name"] . " " . $_SESSION["last-name"]));
+        ?></h1>
     </div>
 
     <footer>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="login.js"></script>
     <title>Login - Pokemon Manager</title>
 </head>
 
@@ -19,17 +20,21 @@
     </header>
 
     <div class="form-container">
-        <form action="https://httpbin.org/get" method="get">
+        <form id="login-form">
             <fieldset>
                 <legend>User Login</legend>
 
+                <p id="global-error" class="error"></p>
+
                 <label for="username" class="uname">Username
                     <input type="text" name="username" id="username" placeholder="Enter username here" required>
+                    <p id="username-error" class="error"></p>
                 </label>
 
 
                 <label for="password" class="pass">password
                     <input type="password" name="password" id="password" placeholder="Enter password here" required>
+                    <p id="password-error" class="error"></p>
                 </label>
 
                 <button type="submit" id="login" class="form-button"><svg class="pointer" width="13" height="13" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +48,7 @@
                             <rect id="Rectangle 7" x="41" y="74" width="12" height="12" fill="black" />
                             <rect id="Rectangle 8" x="29" y="74" width="12" height="12" fill="black" />
                         </g>
-                    </svg> Login</button>
+                    </svg> <span id="submit-text">Login</span></button>
             </fieldset>
         </form>
     </div>

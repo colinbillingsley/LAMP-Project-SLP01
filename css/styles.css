@@ -199,9 +199,15 @@ fieldset {
     padding: 1em;
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 16px;
+}
+
+.error {
+    width: 100%;
+    color: #c00;
 }
 
 legend {
@@ -212,13 +218,19 @@ label {
     padding-bottom: 1em;
 }
 
-input {
+input, .information {
     display: block;
     border: 1px solid black;
     padding: 1em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.8em;
     margin: 0.5em 0 0 0;
     width: 100%;
+}
+
+.information {
+    border: none;
+    padding: 0;
 }
 
 input:focus {
@@ -355,6 +367,26 @@ input:focus {
     flex-grow: 1;
 }
 
+.save-changes {
+    width: 16em;
+}
+
+/* -- EDIT CONTACT STYLING -- */
+.edit-contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* -- DELETE CONTACT STYLING -- */
+.delete-contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
 /* -- CONTACTS PAGE -- */
 .contact-body {
     display: flex;
@@ -381,18 +413,31 @@ input:focus {
     border-bottom: 1px solid black;
 }
 
+.tb-date, .tb-actions {
+    width: 0;
+}
+
 .contact-footer-container {
+    display: flex;
     margin: auto 0;
 }
 
 .contact-footer {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 1em;
     padding: 1em;
     border-top: 1px solid black;
     background-color: white;
+    flex-grow: 1;
+}
+
+.contact-footer:nth-child(2) {
+    justify-content: flex-end;
+}
+
+.page-display {
+    text-align: center;
 }
 
 .table-container {

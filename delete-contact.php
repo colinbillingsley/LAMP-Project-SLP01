@@ -10,7 +10,15 @@ if (!isset($_SESSION["user-id"])) {
     die();
 }
 
-$profile = profileInfo($_SESSION["user-id"]);
+if (isset($_GET["id"])) {
+    $contactId = intval($_GET["id"]);
+    $contactInfo = getContactInfo($contactId);
+
+    if (!$contactInfo) {
+        header("Location: /contacts.php");
+        die();
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -21,8 +29,8 @@ $profile = profileInfo($_SESSION["user-id"]);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <script defer src="signout.js"></script>
-    <script defer src="profile.js"></script>
-    <title>Profile - Pokemon Manager</title>
+    <script defer src="delete-contact.js"></script>
+    <title>Delete Contact - Pokemon Manager</title>
 </head>
 
 <body>
@@ -47,54 +55,45 @@ $profile = profileInfo($_SESSION["user-id"]);
         </nav>
     </header>
 
-    <div class="profile-container">
-        <form id="profile-form" class="profile-form" action="" method="">
+    <div class="delete-contact-container">
+        <form id="delete-contact-form" class="delete-contact-form">
             <fieldset>
-                <legend>Profile</legend>
+                <legend>Are you sure you want to delete this contact?</legend>
 
                 <p id="global-error" class="error"></p>
 
                 <label for="first-name" class="f-name">First Name
-                    <input type="text" name="first-name" id="first-name" value="<?php
-                        echo htmlspecialchars($profile["first-name"]);
-                    ?>">
-                    <p id="first-name-error" class="error"></p>
+                    <div class="information"><?php
+                        if (isset($contactInfo))
+                            echo htmlspecialchars($contactInfo["first-name"]);
+                    ?></div>
                 </label>
 
                 <label for="last-name" class="l-name">Last Name
-                    <input type="text" name="last-name" id="last-name" value="<?php
-                        echo htmlspecialchars($profile["last-name"]);
-                    ?>">
-                    <p id="last-name-error" class="error"></p>
+                    <div class="information"><?php
+                        if (isset($contactInfo))
+                            echo htmlspecialchars($contactInfo["last-name"]);
+                    ?></div>
                 </label>
 
                 <label for="email" class="email">Email
-                    <input type="text" name="email" id="email" value="<?php
-                        echo htmlspecialchars($profile["email"]);
-                    ?>">
-                    <p id="email-error" class="error"></p>
+                    <div class="information"><?php
+                        if (isset($contactInfo))
+                            echo htmlspecialchars($contactInfo["email"]);
+                    ?></div>
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
-                    <input type="tel" name="phone" id="phone" value="<?php
-                        echo htmlspecialchars($profile["phone"]);
-                    ?>">
-                    <p id="phone-error" class="error"></p>
+                    <div class="information"><?php
+                        if (isset($contactInfo))
+                            echo htmlspecialchars($contactInfo["phone"]);
+                    ?></div>
                 </label>
 
-                <label for="username" class="uname">Username
-                    <input type="text" name="username" id="username" value="<?php
-                        echo htmlspecialchars($profile["username"]);
-                    ?>">
-                    <p id="username-error" class="error"></p>
-                </label>
-
-                <label for="password" class="pass">Password
-                    <input type="password" name="password" id="password" placeholder="(unchanged)" autocomplete="new-password">
-                    <p id="password-error" class="error"></p>
-                </label>
-
-                <button id="save-changes" class="main-button save-changes right border">Save Changes</button>
+                <div>
+                    <button id="confirm-delete" class="main-button right border">Confirm Delete</button>
+                    <button id="cancel" class="main-button right border">Cancel</button>
+                </div>
             </fieldset>
         </form>
     </div>

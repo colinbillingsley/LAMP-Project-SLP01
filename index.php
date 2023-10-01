@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+// if the user is already logged in, redirect them to the main page
+if (isset($_SESSION["user-id"])) {
+    header("Location: /main.php");
+    die();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
