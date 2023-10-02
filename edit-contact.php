@@ -28,6 +28,7 @@ if (isset($_GET["id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/icons8-pokeball-32-2.png">
     <script defer src="signout.js"></script>
     <script defer src="edit-contact.js"></script>
     <title>Edit Contact - Pokemon Manager</title>
@@ -64,40 +65,40 @@ if (isset($_GET["id"])) {
 
                 <label for="first-name" class="f-name">First Name
                     <input type="text" name="first-name" id="first-name" value="<?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["first-name"]);
-                    ?>">
+                                                                                if (isset($contactInfo))
+                                                                                    echo htmlspecialchars($contactInfo["first-name"]);
+                                                                                ?>">
                     <p id="first-name-error" class="error"></p>
                 </label>
 
                 <label for="last-name" class="l-name">Last Name
                     <input type="text" name="last-name" id="last-name" value="<?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["last-name"]);
-                    ?>">
+                                                                                if (isset($contactInfo))
+                                                                                    echo htmlspecialchars($contactInfo["last-name"]);
+                                                                                ?>">
                     <p id="last-name-error" class="error"></p>
                 </label>
 
                 <label for="email" class="email">Email
                     <input type="text" name="email" id="email" value="<?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["email"]);
-                    ?>">
+                                                                        if (isset($contactInfo))
+                                                                            echo htmlspecialchars($contactInfo["email"]);
+                                                                        ?>">
                     <p id="email-error" class="error"></p>
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
                     <input type="tel" name="phone" id="phone" value="<?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["phone"]);
-                    ?>">
+                                                                        if (isset($contactInfo))
+                                                                            echo htmlspecialchars($contactInfo["phone"]);
+                                                                        ?>">
                     <p id="phone-error" class="error"></p>
                 </label>
 
                 <div>
-                    <?php if (isset($_GET["id"])): ?>
+                    <?php if (isset($_GET["id"])) : ?>
                         <button id="save-changes" class="main-button right border">Save Changes</button>
-                    <?php else: ?>
+                    <?php else : ?>
                         <button id="save-changes" class="main-button right border">Add Contact</button>
                         <button id="cancel" class="main-button right border">Cancel</button>
                     <?php endif; ?>

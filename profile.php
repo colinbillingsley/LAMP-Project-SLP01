@@ -20,9 +20,10 @@ $profile = profileInfo($_SESSION["user-id"]);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/icons8-pokeball-32-2.png">
     <script defer src="signout.js"></script>
     <script defer src="profile.js"></script>
-    <title>Profile - Pokemon Manager</title>
+    <title>Edit Profile - Pokemon Manager</title>
 </head>
 
 <body>
@@ -56,36 +57,36 @@ $profile = profileInfo($_SESSION["user-id"]);
 
                 <label for="first-name" class="f-name">First Name
                     <input type="text" name="first-name" id="first-name" value="<?php
-                        echo htmlspecialchars($profile["first-name"]);
-                    ?>">
+                                                                                echo htmlspecialchars($profile["first-name"]);
+                                                                                ?>">
                     <p id="first-name-error" class="error"></p>
                 </label>
 
                 <label for="last-name" class="l-name">Last Name
                     <input type="text" name="last-name" id="last-name" value="<?php
-                        echo htmlspecialchars($profile["last-name"]);
-                    ?>">
+                                                                                echo htmlspecialchars($profile["last-name"]);
+                                                                                ?>">
                     <p id="last-name-error" class="error"></p>
                 </label>
 
                 <label for="email" class="email">Email
                     <input type="text" name="email" id="email" value="<?php
-                        echo htmlspecialchars($profile["email"]);
-                    ?>">
+                                                                        echo htmlspecialchars($profile["email"]);
+                                                                        ?>">
                     <p id="email-error" class="error"></p>
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
                     <input type="tel" name="phone" id="phone" value="<?php
-                        echo htmlspecialchars($profile["phone"]);
-                    ?>">
+                                                                        echo htmlspecialchars($profile["phone"]);
+                                                                        ?>">
                     <p id="phone-error" class="error"></p>
                 </label>
 
                 <label for="username" class="uname">Username
                     <input type="text" name="username" id="username" value="<?php
-                        echo htmlspecialchars($profile["username"]);
-                    ?>">
+                                                                            echo htmlspecialchars($profile["username"]);
+                                                                            ?>">
                     <p id="username-error" class="error"></p>
                 </label>
 

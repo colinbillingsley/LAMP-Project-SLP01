@@ -28,6 +28,7 @@ if (isset($_GET["id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/icons8-pokeball-32-2.png">
     <script defer src="signout.js"></script>
     <script defer src="delete-contact.js"></script>
     <title>Delete Contact - Pokemon Manager</title>
@@ -64,30 +65,30 @@ if (isset($_GET["id"])) {
 
                 <label for="first-name" class="f-name">First Name
                     <div class="information"><?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["first-name"]);
-                    ?></div>
+                                                if (isset($contactInfo))
+                                                    echo htmlspecialchars($contactInfo["first-name"]);
+                                                ?></div>
                 </label>
 
                 <label for="last-name" class="l-name">Last Name
                     <div class="information"><?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["last-name"]);
-                    ?></div>
+                                                if (isset($contactInfo))
+                                                    echo htmlspecialchars($contactInfo["last-name"]);
+                                                ?></div>
                 </label>
 
                 <label for="email" class="email">Email
                     <div class="information"><?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["email"]);
-                    ?></div>
+                                                if (isset($contactInfo))
+                                                    echo htmlspecialchars($contactInfo["email"]);
+                                                ?></div>
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
                     <div class="information"><?php
-                        if (isset($contactInfo))
-                            echo htmlspecialchars($contactInfo["phone"]);
-                    ?></div>
+                                                if (isset($contactInfo))
+                                                    echo htmlspecialchars($contactInfo["phone"]);
+                                                ?></div>
                 </label>
 
                 <div>

@@ -38,6 +38,7 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/icons8-pokeball-32-2.png">
     <script defer src="contacts.js"></script>
     <script defer src="signout.js"></script>
     <title>Contacts - Pokemon Manager</title>
@@ -69,10 +70,10 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
         <div class="contact-header">
             <span>Contacts</span>
             <input id="search" type="search" value="<?php
-                if (isset($_GET["q"])) {
-                    echo htmlspecialchars($_GET["q"]);
-                }
-            ?>" placeholder="Search...">
+                                                    if (isset($_GET["q"])) {
+                                                        echo htmlspecialchars($_GET["q"]);
+                                                    }
+                                                    ?>" placeholder="Search...">
         </div>
         <div class="table-container">
             <table id="contacts-table" class="contact-table">
@@ -87,23 +88,23 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
                     </tr>
                 </thead>
                 <tbody id="contact-tbody">
-                    <?php if (count($contacts) === 0): ?>
+                    <?php if (count($contacts) === 0) : ?>
                         <tr>
                             <td colspan="6" style="text-align: center;">No results</td>
                         </tr>
-                    <?php else: ?>
-                        <?php foreach ($contacts as $key => $contact): ?>
-                        <tr data-contact-id="<?= $contact["contact-id"] ?>">
-                            <td><?= $contact["first-name"] ?></td>
-                            <td><?= $contact["last-name"] ?></td>
-                            <td><?= $contact["email"] ?></td>
-                            <td><?= $contact["phone"] ?></td>
-                            <td><?= $contact["date-recorded"] ?></td>
-                            <td>
-                                <button class="main-button border delete edit-button">Edit</button>
-                                <button class="main-button border delete delete-button">Del</button>
-                            </td>
-                        </tr>
+                    <?php else : ?>
+                        <?php foreach ($contacts as $key => $contact) : ?>
+                            <tr data-contact-id="<?= $contact["contact-id"] ?>">
+                                <td><?= $contact["first-name"] ?></td>
+                                <td><?= $contact["last-name"] ?></td>
+                                <td><?= $contact["email"] ?></td>
+                                <td><?= $contact["phone"] ?></td>
+                                <td><?= $contact["date-recorded"] ?></td>
+                                <td>
+                                    <button class="main-button border delete edit-button">Edit</button>
+                                    <button class="main-button border delete delete-button">Del</button>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </tbody>
@@ -111,16 +112,16 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
         </div>
         <div class="contact-footer-container">
             <div class="contact-footer">
-                <?php if (count($contacts) !== 0): ?>
+                <?php if (count($contacts) !== 0) : ?>
                     <button id="prev-page" data-page="<?= $currPage - 1 ?>" class="main-button border" <?php
-                        if ($currPage <= 1)
-                            echo "disabled";
-                    ?>>◀</button>
+                                                                                                        if ($currPage <= 1)
+                                                                                                            echo "disabled";
+                                                                                                        ?>>◀</button>
                     <div class="page-display">Page<br><?= $currPage ?>/<?= $numPages ?></div>
                     <button id="next-page" data-page="<?= $currPage + 1 ?>" class="main-button border" <?php
-                        if ($currPage >= $numPages)
-                            echo "disabled";
-                    ?>>▶</button>
+                                                                                                        if ($currPage >= $numPages)
+                                                                                                            echo "disabled";
+                                                                                                        ?>>▶</button>
                 <?php endif; ?>
             </div>
             <div id="table-footer" class="contact-footer">

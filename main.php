@@ -16,6 +16,7 @@ if (!isset($_SESSION["user-id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/icons/icons8-pokeball-32-2.png">
     <script defer src="signout.js"></script>
     <title>Pokemon Manager</title>
 </head>
@@ -46,8 +47,8 @@ if (!isset($_SESSION["user-id"])) {
     <!-- Main body section -->
     <div class="main-content">
         <h1 class="welcome-user">Welcome, <?php
-            echo htmlspecialchars(trim($_SESSION["first-name"] . " " . $_SESSION["last-name"]));
-        ?></h1>
+                                            echo htmlspecialchars(trim($_SESSION["first-name"] . " " . $_SESSION["last-name"]));
+                                            ?></h1>
     </div>
 
     <footer>
