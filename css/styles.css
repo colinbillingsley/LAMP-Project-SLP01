@@ -359,6 +359,10 @@ input:focus {
     margin: 0 0 0 auto;
 }
 
+#sign-out {
+    font-size: 0.85em;
+}
+
 /* -- PROFILE STYLING -- */
 .profile-container {
     display: flex;
@@ -528,6 +532,7 @@ tr:nth-child(even) {
 
     /* -- MISCELLANIOUS STYLINGS -- */
     footer {
+        display: flex;
         width: 100%;
     }
 
@@ -554,5 +559,11 @@ tr:nth-child(even) {
         gap: 1em;
         padding: 1em;
         text-align: center;
+    }
+
+    .main-button,
+    .main-link,
+    #sign-out {
+        font-size: calc(0.4em + 1vw);
     }
 }

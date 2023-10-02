@@ -42,7 +42,7 @@
                 </label>
 
                 <label for="phone" class="phone-num">Phone Number
-                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number here" required>
+                    <input type="tel" name="phone" id="phone" placeholder="(XXX)-XXX-XXXX" required>
                     <p id="phone-error" class="error"></p>
                 </label>
 
