@@ -17,6 +17,8 @@ document.getElementById("add-contact").addEventListener("click", () => {
 
 const prevPage = document.getElementById("prev-page");
 const nextPage = document.getElementById("next-page");
+const firstPage = document.getElementById("first-page")
+const lastPage = document.getElementById("last-page")
 
 function navigationHandler() {
     if (searchValue !== "")
@@ -30,6 +32,12 @@ if (prevPage)
 
 if (nextPage)
     nextPage.addEventListener("click", navigationHandler);
+
+if (firstPage)
+    firstPage.addEventListener("click", navigationHandler);
+
+if (lastPage)
+    lastPage.addEventListener("click", navigationHandler);
 
 for (const editButton of document.querySelectorAll(".edit-button")) {
     editButton.addEventListener("click", function() {

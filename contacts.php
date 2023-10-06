@@ -113,6 +113,10 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
         <div class="contact-footer-container">
             <div class="contact-footer">
                 <?php if (count($contacts) !== 0) : ?>
+                    <button id="first-page" data-page="<?= 1 ?>" class="main-button border" <?php
+                                                                                            if ($currPage <= 1)
+                                                                                                echo "disabled";
+                                                                                            ?>>◀◀</button>
                     <button id="prev-page" data-page="<?= $currPage - 1 ?>" class="main-button border" <?php
                                                                                                         if ($currPage <= 1)
                                                                                                             echo "disabled";
@@ -122,10 +126,14 @@ $contacts = getUserContacts($_SESSION["user-id"], ($currPage - 1) * $CONTACTS_PE
                                                                                                         if ($currPage >= $numPages)
                                                                                                             echo "disabled";
                                                                                                         ?>>▶</button>
+                    <button id="last-page" data-page="<?= $numPages ?>" class="main-button border" <?php
+                                                                                                    if ($currPage >= $numPages)
+                                                                                                        echo "disabled";
+                                                                                                    ?>>▶▶</button>
                 <?php endif; ?>
             </div>
             <div id="table-footer" class="contact-footer">
-                <button id="add-contact" class="main-button border">Add Contact</button>
+                <button id="add-contact" class="main-button border right">Add Contact</button>
             </div>
         </div>
     </div>

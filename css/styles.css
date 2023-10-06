@@ -436,10 +436,6 @@ input:focus {
     flex-grow: 1;
 }
 
-.contact-footer:nth-child(2) {
-    justify-content: flex-end;
-}
-
 .page-display {
     text-align: center;
 }
