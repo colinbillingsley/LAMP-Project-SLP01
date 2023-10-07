@@ -483,6 +483,13 @@ tr:nth-child(even) {
     to {opacity: 0%;}
   }
 
+
+@media only screen and (max-width: 500px) {
+    #first-page, #last-page {
+        display: none;
+    }
+}
+
 /* style when width is <= 800px */
 @media only screen and (max-width: 800px) {
     /* LANDING PAGE (INDEX) STYLING */
