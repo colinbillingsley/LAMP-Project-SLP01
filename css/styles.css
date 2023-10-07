@@ -441,7 +441,7 @@ input:focus {
 }
 
 .table-container {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .delete {
